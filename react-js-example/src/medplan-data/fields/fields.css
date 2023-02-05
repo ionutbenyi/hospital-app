@@ -1,0 +1,52 @@
+.form-control {
+  width: 40% !important;
+  border: 1px solid #dddddd;
+  padding: 10px;
+}
+
+.control-error {
+  border: 1px solid #f20000 !important;
+}
+
+.error-message{
+  color: #ec392f;
+  margin-bottom: 1%;
+}
+
+.update-patient-status{
+  margin-left: 11.7vw;
+  margin-top: -30vh;
+  position: absolute;
+}
+
+#upd-pat{
+  margin-left: 1vw;
+}
+
+.medplan-adds-patient{
+  margin-left: -3.5vw;
+  display: inline-block;
+
+}
+
+.medplan-adds-medication{
+  margin-left: -4vw;
+  display: inline-block;
+}
+
+#add-mp{
+  margin-left: 1vw;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+#upd-mp{
+  margin-left: 1vw;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.medplan-form-container{
+  background-color: gray;
+  height: 80vh;
+}

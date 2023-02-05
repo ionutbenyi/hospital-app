@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+package com.example.rpcclient.rpcclient.grpc;
+
+message MedicationRequest {
+    string startHour = 1;
+    string endHour = 2;
+    string medicationName = 3;
+}
+
+message MedicationResponse {
+    string taken = 1;
+}
+
+message TakeRequest {
+    string patientId = 1;
+}
+
+message TakeResponse {
+    string startHour = 1;
+    string endHour = 2;
+    string medicationName = 3;
+}
+
+message Medications {
+    repeated TakeResponse medications = 1;
+}
+
+message AskUsersRequest {
+    string msg = 1;
+}
+
+message AskUsersResponse {
+    string patientName = 1;
+    string patientId = 2;
+}
+
+message Users {
+    repeated AskUsersResponse users = 1;
+}
+
+message TakenConfirmationRequest {
+    string patientId = 1;
+    string medicationName = 2;
+}
+
+message TakenConfirmationResponse {
+    string msg = 1;
+}
+
+message NotTakenConfirmationRequest {
+    string patientId = 1;
+    string medicationName = 2;
+}
+
+message NotTakenConfirmationResponse {
+    string msg = 1;
+}
+
+service MedicationService {
+    rpc sendMedication (MedicationRequest) returns (MedicationResponse);
+    rpc sendTakeRequest (TakeRequest) returns (Medications);
+    rpc askForRegisteredPatients (AskUsersRequest) returns (Users);
+    rpc confirmTakenMedicine (TakenConfirmationRequest) returns (TakenConfirmationResponse);
+    rpc confirmNotTakenMedicine (NotTakenConfirmationRequest) returns (NotTakenConfirmationResponse);
+}

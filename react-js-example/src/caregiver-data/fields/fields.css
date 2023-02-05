@@ -1,0 +1,34 @@
+.form-control {
+  width: 60% !important;
+  border: 1px solid #dddddd;
+  padding: 10px;
+}
+
+.control-error {
+  border: 1px solid #f20000 !important;
+}
+
+.error-message{
+  color: #ec392f;
+  margin-bottom: 1%;
+}
+
+.title-row{
+  margin-left: 3vw;
+}
+
+.caregivers-dropdown-container{
+  
+  list-style: none;
+}
+
+.delete-caregiver-status{
+  margin-left: 10vw;
+  margin-top: -37.3vh;
+  position: absolute;
+}
+
+.caregiver-adds-patient{
+  margin-left: 10vw;
+  margin-top: 5vh;
+}

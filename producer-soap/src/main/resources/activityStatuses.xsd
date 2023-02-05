@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.patientStatus/gen"
+           targetNamespace="http://www.patientStatus/gen" elementFormDefault="qualified" >
+
+    <xs:complexType name="activityStatus">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="startDate" type="xs:string"/>
+            <xs:element name="endDate" type="xs:string"/>
+            <xs:element name="patientId" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="activityListRequest">
+        <xs:complexType >
+            <xs:sequence>
+                <xs:element name="userId" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="activityListResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="activities" type="tns:activityStatus" minOccurs="0"
+                        maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="dailyStatus">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+            <xs:element name="userId" type="xs:int"/>
+            <xs:element name="taken" type="xs:boolean"/>
+            <xs:element name="medicationName" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="recordsListRequest">
+        <xs:complexType >
+            <xs:sequence>
+                <xs:element name="userId" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="recordsListResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="dailyRecords" type="tns:dailyStatus" minOccurs="0"
+                            maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

@@ -1,0 +1,48 @@
+.form-control {
+  width: 100% !important;
+  border: 1px solid #dddddd;
+  padding: 10px;
+}
+
+.control-error {
+  border: 1px solid #f20000 !important;
+}
+
+.error-message{
+  color: #ec392f;
+  margin-bottom: 1%;
+}
+
+.patients-dropdown-container{
+  margin-left: 5vw;
+  list-style: none;
+}
+
+.med-form{
+  height: 100%;
+}
+
+.caregiver-form{
+  width: 100%;
+  margin-top: 3vh;
+}
+
+.title-row{
+  padding-bottom: 3vh;
+  padding-left: 2vw;
+  padding-top: 3vh;
+  width: 80%;
+}
+
+.register-section{
+  padding-bottom: 3vh;
+  padding-left: 3vw;
+  width: 95%;
+}
+
+.delete-patient-status{
+  margin-left: 11.7vw;
+  margin-top: -37.3vh;
+  position: absolute;
+}
+
